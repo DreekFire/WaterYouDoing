@@ -1,15 +1,11 @@
 html {
     -webkit-appearance: none;
     border-radius: 0;
-    background-image: url("images/waterbackground.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 body {
     height : 100%;
-    background-image: url("images/waterbackground.jpg");
+    background-image: url("images/transparent-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
