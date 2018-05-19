@@ -41,14 +41,17 @@ function myLoadFunc() {
 	var plantStages = [
 		"images/Sprout1-1.png",
 		"images/Plant1.png",
-		"images/Final1.png"
+		"images/Final1.png",
+		"images/dead1.png"
 	]
 	document.getElementById("plont").src = plantStages[plant[0]];
-
+	if(plant[1] > 100) {
+		document.getElementById("plont").src = plantStages[plant[3]]
+	}
 	if(diffDays > daysElapsed) {
 		daysElapsed++;
 		if(waterConsumed > startingWater - waterNeeded[plant[0]]) {
-			plant[1]++;
+			plant[1]+= waterConsumed - (startingWater - waterNeeded[plant[0]]);
 			plant[0]--;
 		}
 		if(daysElapsed > daysNeeded[plant[0]] && plant[0] < 2) {
