@@ -17,6 +17,9 @@ body {
     background-size: cover;
 }
 
+#toilet{
+    background-image: url("Toilet.png");
+}
 
 
 #activityMenu {
