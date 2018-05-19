@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Water things</title>
+        <script type = "text/javascript" src = "script.js"></script>
     </head>
     <body>
         
@@ -28,32 +29,21 @@
           </fieldset>
         </form> 
         
+        <layer id = "activityMenu" z-index = 2>
+          <button>Shower</button>
+          <button>Toilet</button>
+          <button>Laundry</button>
+          <button>Brushing Teeth</button>
+          <button>Other</button>
+          <form>
+            <div id="genericInputDiv">
+              <p id="howmuch">How Much Water Did You Use? (in gallons)</p>
+              <p id="howmany">How Many Minutes Did It Take?</p>
+              <input type="number" name="genericInput" value="">
+            </div>
+          </form>
+        </layer>
         
-        <form class="pure-form pure-form-stacked">
-    <fieldset>
-        <legend>A Stacked Form</legend>
-
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="Email">
-        <span class="pure-form-message">This is a required field.</span>
-
-        <label for="password">Password</label>
-        <input id="password" type="password" placeholder="Password">
-
-        <label for="state">State</label>
-        <select id="state">
-            <option>AL</option>
-            <option>CA</option>
-            <option>IL</option>
-        </select>
-
-        <label for="remember" class="pure-checkbox">
-            <input id="remember" type="checkbox"> Remember me
-        </label>
-
-        <button type="submit" class="pure-button pure-button-primary">Sign in</button>
-    </fieldset>
-</form>
         
         <p>PLONT</p>
         <img src = "https://i.pinimg.com/originals/29/63/10/29631076dea84ef46c3f48eb58fa36f4.jpg" height = 100 width = 100>
