@@ -40,7 +40,6 @@
         </form>-->
         <div id="history">History<br></div>
         <div id="farm"></div>
-        <button onclick="toggle('activityMenu')">Record Activity</button>
         <layer id = "activityMenu">
           <button class="actButton" onclick="addActivity('Shower')">Shower</button>
           <button class="actButton" onclick="addActivity('Toilet')">Toilet</button>
@@ -53,18 +52,19 @@
             <input type="number" id="amount" value="">
             <button onClick="addWater('amount')">Submit</button>
           </div>
-
         </layer>
+
+        <button id="activityButton" onclick="toggle('activityMenu'); toggleBlur('plont')">Record Activity</button>
+        <p id="title">PLONT</p>
         
-        <p>PLONT</p>
+        <img id="plont" src = "https://i.pinimg.com/originals/29/63/10/29631076dea84ef46c3f48eb58fa36f4.jpg">
 
-        <img src = "https://i.pinimg.com/originals/29/63/10/29631076dea84ef46c3f48eb58fa36f4.jpg" height = 100 width = 100>
-
-        <h1>PLONTS</h1>
-        <p>Think about how much water you use in everyday life. <br><br>Californians know. Water Conservation. It's For Life.
-        <br> For more information, please visit <a href = "http://saveourwater.com/">Save Our Water</a>.</p>
-        <img src = "images/calidrought_may2018.jpg" height = 100vw/>
-        <p>California has been in drought from December 2011 to January 2017. But it's not over: the problem still exists.</p> -->
-
+        <div id="footer">
+          <h1>PLONTS</h1>
+          <p>Think about how much water you use in everyday life. <br><br>Californians know. Water Conservation. It's For Life.
+          <br> For more information, please visit <a href = "http://saveourwater.com/">Save Our Water</a>.</p>
+          <img src = "images/calidrought_may2018.jpg" height = 100vw/>
+          <p>California has been in drought from December 2011 to January 2017. But it's not over: the problem still exists.</p>
+        </div>
     </body>
 </html>

@@ -2,22 +2,45 @@
 html {
     -webkit-appearance: none;
     border-radius: 0;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-    height : 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
     background-image: url("images/transparent-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+#activityButton {
+    position: fixed;
+    top: 2em;
+    right: 2em;
+    height: 10em;
+    width: 20em;
+}
 
+#title {
+    float: left;
+    position: absolute;
+    margin-top: 1em;
+    margin-left: 1em;
+}
 
+#plont {
+    height: 100vh;
+    width: 100vh;
+    filter: none;
+}
 
 #activityMenu {
     display: none;
     position: absolute;
+    opacity: 0.6;
 }
 
 #genericInput {
@@ -33,7 +56,7 @@ body {
 }
 
 #genericInputDiv {
-    width: 30vw;
+    width: 25vw;
     position: relative;
     display: none;
     float: left;
@@ -42,11 +65,20 @@ body {
 #history {
     float: right;
     width: 10em;
+    margin-top: 2em;
+    margin-right: 20em;
+}
+
+#footer {
+    background-color: lightskyblue;
+    margin: 0;
+    height: 100%;
+    text-align: center;
 }
 
 .actButton {
-    height: 30vw;
-    width: 30vw;
+    height: 24vw;
+    width: 24vw;
     margin: 1em;
     float: left;
     border: none;

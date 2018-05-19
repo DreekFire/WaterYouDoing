@@ -28,13 +28,21 @@ function myLoadFunc() {
 	shower = false;
 	today = new Date();
 	d = today.getDate();
-	m = today.getMonth()+1; //January is 0!
+	m = today.getMonth();
 	y = today.getFullYear();
 	startDate = new Date(localStorage.getItem("startDate")) || new Date(y, m, d);
 	timeDiff = Math.abs(today.getTime() - startDate.getTime());
 	diffDays = Math.floor(timeDiff / (1000 * 3600 * 24));
+	var plantStages = [
+		"images/Sprout1-1.png",
+		"images/Plant1.png",
+		"images/Final1.png"
+	]
+	document.getElementById("plont").src = plantStages[plant[0]];
 
-	if(diffDays >= daysElapsed) {
+	if(diffDays > daysElapsed) {
+		alert(timeDiff);
+		alert(diffDays);
 		daysElapsed++;
 		plant[0]++;
 		if(waterConsumed > startingWater - waterNeeded[plant[0]]) {
@@ -52,6 +60,15 @@ function myLoadFunc() {
 	localStorage.setItem("plant0", String(plant[0]));
 	localStorage.setItem("plant1", String(plant[1]));
 	localStorage.setItem("startDate", String(startDate));
+}
+
+function toggleBlur(id) {
+	let e = document.getElementById(id);
+	if(e.style.filter === "blur(4px)") {
+		e.style.filter = "none";
+	} else {
+		e.style.filter = "blur(4px)";
+	}
 }
 
 function show(id) {
