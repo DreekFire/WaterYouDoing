@@ -3,11 +3,36 @@
 //laundry 45
 //brushing teeth 0.5
 
+var waterNeeded = [20, 60, 100];
+var daysNeeded = [2, 4, 5];
+var daysElapsed = 0;
 var waterConsumed = 0;
 var startingWater = 80;
 var plant = [0, 0];
 var shower = false;
-var lastDate = new Date();
+var startDate = new Date(2018, 05, 19);
+var today = new Date();
+var d = today.getDate();
+var m = today.getMonth()+1; //January is 0!
+var y = today.getFullYear();
+var timeDiff = Math.abs(today.getTime() - startDate.getTime());
+var diffDays = Math.floor(timeDiff / (1000 * 3600 * 24));
+
+var quotes = [
+	"",
+	"",
+	"",
+	"",
+	"",
+	""
+]
+
+if(diffDays >= daysElapsed) {
+	daysElapsed++;
+	if(waterConsumed > startingWater - waterNeeded[plant[0]]) {
+		plant[1]++;
+	}
+}
 
 function show(id) {
 	let e = document.getElementById(id);
