@@ -5,28 +5,18 @@
         <script type = "text/javascript" src = "script.js"></script>
     </head>
     <body>
-        <p> what is up my friends</p>
-        <p> nothing much pals</p>
         
         
-        <form action="/action_page.php" id = "form_waterGoal">
-              Your name:<br>
-              <input type="text" name="firstname" value="">
-              <br>
-              Water Goal:<br>
-              <input type="text" name="waterGoal" value="">
-              <br><br>
-        <input type="submit" value="Submit">
-        </form>
-        <p><br><br></p>
-        <form action="/action_page.php">
-          First name:<br>
-          <input type="text" name="firstname" value="Mickey">
+        <form action="/action_page.php"><fieldset>
+            <legend>What actions are you taking?</legend>
+          Action:<br>
+          <input type="text" name="actionname" placeholder="action">
           <br>
-          Last name:<br>
-          <input type="text" name="lastname" value="Mouse">
+          Water Used:<br>
+          <input type="text" name="waterused" placeholder="save water!">
           <br><br>
           <input type="submit" value="Submit">
+          </fieldset>
         </form> 
         
         <layer id = "activityMenu" z-index = 2>
@@ -38,11 +28,17 @@
           <form>
             <div id="genericInputDiv">
               <p id="howmuch">How Much Water Did You Use? (in gallons)</p>
+              <input type="number" name="genericInput" placeholder="">
               <p id="howmany">How Many Minutes Did It Take?</p>
+<<<<<<< HEAD
               <input type="number" id="genericInput" value="">
+=======
+>>>>>>> f8d84961c1beefcaa090796e623fd21ee86cd3f3
             </div>
           </form>
         </layer>
+        
+        
         <p>PLONT</p>
         <img src = "https://i.pinimg.com/originals/29/63/10/29631076dea84ef46c3f48eb58fa36f4.jpg" height = 100 width = 100>
 
