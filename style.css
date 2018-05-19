@@ -7,10 +7,15 @@ html {
 }
 
 body {
+<<<<<<< HEAD
     padding: 0;
     margin: 0;
     height: 100%;
     background-image: url("images/transparent-bg.jpg");
+=======
+    height : 100%;
+    background-image: url("images/transparent-bg.png");
+>>>>>>> 7cce99fd565a75c39740a8a60701f72079139fff
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -82,7 +87,7 @@ body {
     margin: 1em;
     float: left;
     border: none;
-    background: greenyellow;
+    background-color: greenyellow;
     border-radius: 0;
     -webkit-appearance: none;
 
@@ -93,4 +98,5 @@ body {
 #toilet{
     background-image: url("Toilet.png");
 }
+
 
