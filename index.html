@@ -18,8 +18,28 @@
           </fieldset>
         </form>-->
         <div id="history">History<br></div>
+<<<<<<< HEAD
         <div id="farm"></div>
         <button onclick="toggle('activityMenu')">Record Activity</button>
+=======
+        
+        <layer id = "activityMenu" z-index = 2>
+          <button onlick="show('howmany');show('genericInput')">Shower</button>
+          <button>Toilet</button>
+          <button>Laundry</button>
+          <button>Brushing Teeth</button>
+          <button onlick="show('howmuch');show('genericInput')">Other</button>
+          <form>
+            <div id="genericInputDiv">
+              <p id="howmuch">How Much Water Did You Use? (in gallons)</p>
+              <input type="number" name="genericInput" placeholder="">
+              <p id="howmany">How Many Minutes Did It Take?</p>
+              <input type="number" id="genericInput" value="">
+
+            </div>
+          </form>
+
+>>>>>>> aafd22f150d7e812a94ef1aeaf23713e3022b447
         <layer id = "activityMenu">
           <button class="actButton" onclick="addActivity('Shower')">Shower</button>
           <button class="actButton" onclick="addActivity('Toilet')">Toilet</button>
@@ -32,6 +52,10 @@
             <input type="number" id="amount" value="">
             <button onClick="addWater('amount')">Submit</button>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> aafd22f150d7e812a94ef1aeaf23713e3022b447
         </layer>
         
         <p>PLONT</p>
