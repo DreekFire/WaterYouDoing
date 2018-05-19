@@ -11,12 +11,12 @@ function setGoal(goal) {
 	localStorage.setItem("goal", goal);
 }
 
-function showMenu() {
-	let menu = document.getElementById("ActivityMenu");
-	if(menu.style.display === "block") {
-		menu.style.display = "hidden";
+function show(id) {
+	let e = document.getElementById("id");
+	if(e.style.display === "block") {
+		e.style.display = "hidden";
 	} else {
-		menu.style.display = "block";
+		e.style.display = "block";
 	}
 }
 
