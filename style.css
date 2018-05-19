@@ -7,20 +7,10 @@ html {
 }
 
 body {
-<<<<<<< HEAD
     height : 100%;
     background-image: url("images/transparent-bg.png");
-=======
-<<<<<<< HEAD
     padding: 0;
     margin: 0;
-    height: 100%;
-    background-image: url("images/transparent-bg.jpg");
-=======
-    height : 100%;
-    background-image: url("images/transparent-bg.png");
->>>>>>> 7cce99fd565a75c39740a8a60701f72079139fff
->>>>>>> 21ffd77a8371d44292bc0f5d80b3700fc285f34a
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,12 +34,14 @@ body {
 }
 
 #plont {
+    z-index: 1;
     height: 100vh;
     width: 100vh;
     filter: none;
 }
 
 #activityMenu {
+    z-index: 2;
     display: none;
     position: absolute;
     opacity: 0.6;
