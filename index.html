@@ -2,12 +2,11 @@
 <html>
     <head>
         <title>Water things</title>
-        <script type = "text/javascript" src = "script.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        
-        
-        <form action="/action_page.php"><fieldset>
+        <!--<form action="/action_page.php"><fieldset>
             <legend>What actions are you taking?</legend>
           Action:<br>
           <input type="text" name="actionname" placeholder="action">
@@ -17,8 +16,10 @@
           <br><br>
           <input type="submit" value="Submit">
           </fieldset>
-        </form> 
+        </form>-->
+        <div id="history">History<br></div>
         
+<<<<<<< HEAD
         <layer id = "activityMenu" z-index = 2>
           <button onlick="show('howmany');show('genericInput')">Shower</button>
           <button>Toilet</button>
@@ -34,8 +35,21 @@
 
             </div>
           </form>
+=======
+        <layer id = "activityMenu">
+          <button class="actButton" onclick="addActivity('Shower')">Shower</button>
+          <button class="actButton" onclick="addActivity('Toilet')">Toilet</button>
+          <button class="actButton" onclick="addActivity('Laundry')">Laundry</button>
+          <button class="actButton" onclick="addActivity('Brushing Teeth')">Brushing Teeth</button>
+          <button class="actButton" onclick="addActivity('Other')">Other</button>
+          <div id="genericInputDiv">
+            <p id="howmuch">How Much Water Did You Use? (in gallons)</p>
+            <p id="howmany">How Many Minutes Did It Take?</p>
+            <input type="number" id="amount" value="">
+            <button onClick="addWater('amount')">Submit</button>
+          </div>
+>>>>>>> 6841833883d9ffe4de3f52458b5ba9c57d65593b
         </layer>
-        
         
         <p>PLONT</p>
         <img src = "https://i.pinimg.com/originals/29/63/10/29631076dea84ef46c3f48eb58fa36f4.jpg" height = 100 width = 100>

@@ -1,0 +1,27 @@
+#genericInput {
+    display: none;
+}
+
+#howmuch {
+    display: none;
+}
+
+#howmany {
+    display: none;
+}
+
+#genericInputDiv {
+    display: none;
+}
+
+#history {
+    float: right;
+    width: 10em;
+}
+
+.actButton {
+    height: 45vw;
+    width: 45vw;
+    margin: 1em;
+    float: left;
+}
