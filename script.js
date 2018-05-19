@@ -12,7 +12,12 @@ function setGoal(goal) {
 }
 
 function showMenu() {
-
+	let menu = document.getElementById("ActivityMenu");
+	if(menu.style.display === "block") {
+		menu.style.display = "hidden";
+	} else {
+		menu.style.display = "block";
+	}
 }
 
 function addActivity(activity) {
@@ -29,9 +34,8 @@ function addActivity(activity) {
 		case "Brushing Teeth":
 			waterConsumed += 0.5;
 			break;
-		case "Generic":
-			document.getElementById("Generic").style.display = "block";
+		case "Other":
+			document.getElementById("GenericActivity").style.display = "block";
 			break;
 	}
-
 }
