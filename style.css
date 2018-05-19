@@ -3,9 +3,15 @@ html {
     border-radius: 0;
 }
 
-body {
-    background-image: url("Images/waterbackground.jpg");
+body, html {
+    height : 100%;
+    background-image: url("img_girl.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
 
 #activityMenu {
     display: none;
