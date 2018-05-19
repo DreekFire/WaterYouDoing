@@ -1,0 +1,20 @@
+#genericInput {
+    display: none;
+}
+
+#howmuch {
+    display: none;
+}
+
+#howmany {
+    display: none;
+}
+
+#genericInputDiv {
+    display: none;
+}
+
+#history {
+    float: right;
+    width: 10em;
+}

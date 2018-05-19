@@ -2,11 +2,10 @@
 <html>
     <head>
         <title>Water things</title>
-        <script type = "text/javascript" src = "script.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        
-        
         <form action="/action_page.php"><fieldset>
             <legend>What actions are you taking?</legend>
           Action:<br>
@@ -17,27 +16,22 @@
           <br><br>
           <input type="submit" value="Submit">
           </fieldset>
-        </form> 
+        </form>
+        <div id="history">History<br></div>
         
-        <layer id = "activityMenu" z-index = 2>
-          <button onlick="show('howmany');show('genericInput')">Shower</button>
-          <button>Toilet</button>
-          <button>Laundry</button>
-          <button>Brushing Teeth</button>
-          <button onlick="show('howmuch');show('genericInput')">Other</button>
-          <form>
-            <div id="genericInputDiv">
-              <p id="howmuch">How Much Water Did You Use? (in gallons)</p>
-              <input type="number" name="genericInput" placeholder="">
-              <p id="howmany">How Many Minutes Did It Take?</p>
-<<<<<<< HEAD
-              <input type="number" id="genericInput" value="">
-=======
->>>>>>> f8d84961c1beefcaa090796e623fd21ee86cd3f3
-            </div>
-          </form>
+        <layer id = "activityMenu">
+          <button onclick="addActivity('Shower')">Shower</button>
+          <button onclick="addActivity('Toilet')">Toilet</button>
+          <button onclick="addActivity('Laundry')">Laundry</button>
+          <button onclick="addActivity('Brushing Teeth')">Brushing Teeth</button>
+          <button onclick="addActivity('Other')">Other</button>
+          <div id="genericInputDiv">
+            <p id="howmuch">How Much Water Did You Use? (in gallons)</p>
+            <p id="howmany">How Many Minutes Did It Take?</p>
+            <input type="number" id="amount" value="">
+            <button onClick="addWater('amount')">Submit</button>
+          </div>
         </layer>
-        
         
         <p>PLONT</p>
         <img src = "https://i.pinimg.com/originals/29/63/10/29631076dea84ef46c3f48eb58fa36f4.jpg" height = 100 width = 100>
