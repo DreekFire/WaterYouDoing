@@ -4,8 +4,6 @@
         <title>Water things</title>
     </head>
     <body>
-        <p> what is up my friends</p>
-        <p> nothing much pals</p>
         
         
         <form action="/action_page.php" id = "form_waterGoal">
@@ -18,16 +16,44 @@
         <input type="submit" value="Submit">
         </form>
         <p><br><br></p>
-        <form action="/action_page.php">
-          First name:<br>
-          <input type="text" name="firstname" value="Mickey">
+        <form action="/action_page.php"><fieldset>
+            <legend>What actions are you taking?</legend>
+          Action:<br>
+          <input type="text" name="actionname" placeholder="action">
           <br>
-          Last name:<br>
-          <input type="text" name="lastname" value="Mouse">
+          Water Used:<br>
+          <input type="text" name="waterused" placeholder="save water!">
           <br><br>
           <input type="submit" value="Submit">
+          </fieldset>
         </form> 
         
+        
+        <form class="pure-form pure-form-stacked">
+    <fieldset>
+        <legend>A Stacked Form</legend>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Email">
+        <span class="pure-form-message">This is a required field.</span>
+
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Password">
+
+        <label for="state">State</label>
+        <select id="state">
+            <option>AL</option>
+            <option>CA</option>
+            <option>IL</option>
+        </select>
+
+        <label for="remember" class="pure-checkbox">
+            <input id="remember" type="checkbox"> Remember me
+        </label>
+
+        <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+    </fieldset>
+</form>
         
         <p>PLONT</p>
         <img src = "https://i.pinimg.com/originals/29/63/10/29631076dea84ef46c3f48eb58fa36f4.jpg" height = 100 width = 100>
