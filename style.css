@@ -43,8 +43,8 @@ body, html {
 }
 
 .actButton {
-    height: 45vw;
-    width: 45vw;
+    height: 30vw;
+    width: 30vw;
     margin: 1em;
     float: left;
     border: none;
