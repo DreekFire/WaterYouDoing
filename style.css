@@ -9,6 +9,7 @@ body {
 
 #activityMenu {
     display: none;
+    position: absolute;
 }
 
 #genericInput {
@@ -24,7 +25,10 @@ body {
 }
 
 #genericInputDiv {
+    width: 45vw;
+    position: relative;
     display: none;
+    float: left;
 }
 
 #history {
@@ -39,4 +43,6 @@ body {
     float: left;
     border: none;
     background: greenyellow;
+    border-radius: 0;
+    -webkit-appearance: none;
 }

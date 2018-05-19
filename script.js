@@ -4,13 +4,10 @@
 //brushing teeth 0.5
 
 var waterConsumed = 0;
-var startingWater;
+var startingWater = 80;
+var plant = [0, 0];
 var shower = false;
-
-function setGoal(goal) {
-	localStorage.setItem("waterConsumed", "0");
-	localStorage.setItem("goal", goal);
-}
+var lastDate = new Date();
 
 function show(id) {
 	let e = document.getElementById(id);
@@ -22,14 +19,28 @@ function hide(id) {
 	e.style.display = "none";
 }
 
+function toggle(id) {
+	let e = document.getElementById(id);
+	if(e.style.display === "block") {
+		e.style.display = "none";
+	} else {
+		e.style.display = "block";
+	}
+}
+
+function consumeWater(gallons) {
+	waterConsumed += gallons;
+	localStorage.setItem("waterConsumed", waterConsumed);
+}
+
 function addWater(id) {
 	e = document.getElementById(id);
 	gallons = e.value;
 	if(shower) {
-		waterConsumed += gallons * 5 / 8;
+		consumeWater(gallons * 5 / 8);
 		addText("history", "Shower: " + gallons * 5 / 8 + "<br>");
 	} else {
-		waterConsumed += gallons;
+		consumeWater(gallons);
 		addText("history", "Other: " + gallons + "<br>");
 	}
 	e.value = "";
@@ -45,15 +56,15 @@ function addActivity(activity) {
 			shower = true;
 			break;
 		case "Toilet":
-			waterConsumed += 5;
+			consumeWater(5);
 			addText("history", "Toilet: 5" + "<br>");
 			break;
 		case "Laundry":
-			waterConsumed += 45;
+			consumeWater(45);
 			addText("history", "Laundry: 45" + "<br>");
 			break;
 		case "Brushing Teeth":
-			waterConsumed += 0.5;
+			consumeWater(0.5);
 			addText("history", "Brushing Teeth: 0.5" + "<br>");
 			break;
 		case "Other":
