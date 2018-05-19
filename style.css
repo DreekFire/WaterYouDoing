@@ -3,7 +3,7 @@ html {
     border-radius: 0;
 }
 
-body, html {
+body {
     height : 100%;
     background-image: url("images/waterbackground.jpg");
     background-position: center;
