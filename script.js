@@ -3,21 +3,36 @@
 //laundry 45
 //brushing teeth 0.5
 
-function onLoad() {
-	var waterNeeded = [20, 60, 100];
-	var daysNeeded = [2, 6, 11];
-	var daysElapsed = Number(localStorage.getItem("daysElapsed")) || 0;
-	var waterConsumed = Number(localStorage.getItem("waterConsumed")) || 0;
-	var startingWater = Number(localStorage.getItem("startingWater")) || 80;
-	var plant = [Number(localStorage.getItem("plant0")), Number(localStorage.getItem("plant1"))] || [0, 0];
-	var shower = false;
-	var today = new Date();
-	var d = today.getDate();
-	var m = today.getMonth()+1; //January is 0!
-	var y = today.getFullYear();
-	var startDate = localStorage.getItem("startDate") || new Date(y, m, d);
-	var timeDiff = Math.abs(today.getTime() - startDate.getTime());
-	var diffDays = Math.floor(timeDiff / (1000 * 3600 * 24));
+	var waterNeeded;
+	var daysNeeded;
+	var daysElapsed;
+	var waterConsumed;
+	var startingWater;
+	var plant;
+	var shower;
+	var today;
+	var d;
+	var m;
+	var y;
+	var startDate;
+	var timeDiff;
+	var diffDays;
+
+function myLoadFunc() {
+	waterNeeded = [20, 60, 100];
+	daysNeeded = [2, 6, 11];
+	daysElapsed = Number(localStorage.getItem("daysElapsed")) || 0;
+	waterConsumed = Number(localStorage.getItem("waterConsumed")) || 0;
+	startingWater = Number(localStorage.getItem("startingWater")) || 80;
+	plant = [Number(localStorage.getItem("plant0")), Number(localStorage.getItem("plant1"))] || [0, 0];
+	shower = false;
+	today = new Date();
+	d = today.getDate();
+	m = today.getMonth()+1; //January is 0!
+	y = today.getFullYear();
+	startDate = new Date(localStorage.getItem("startDate")) || new Date(y, m, d);
+	timeDiff = Math.abs(today.getTime() - startDate.getTime());
+	diffDays = Math.floor(timeDiff / (1000 * 3600 * 24));
 
 	if(diffDays >= daysElapsed) {
 		daysElapsed++;

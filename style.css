@@ -33,7 +33,7 @@ body {
 }
 
 #genericInputDiv {
-    width: 45vw;
+    width: 30vw;
     position: relative;
     display: none;
     float: left;
