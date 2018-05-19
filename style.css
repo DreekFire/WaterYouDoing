@@ -50,7 +50,7 @@ body {
     margin: 1em;
     float: left;
     border: none;
-    background: greenyellow;
+    background-color: greenyellow;
     border-radius: 0;
     -webkit-appearance: none;
 
@@ -61,4 +61,5 @@ body {
 #toilet{
     background-image: url("Toilet.png");
 }
+
 
