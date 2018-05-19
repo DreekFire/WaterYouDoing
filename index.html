@@ -2,7 +2,8 @@
 <html>
     <head>
         <title>Water things</title>
-        <script type = "text/javascript" src = "script.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body onload="myLoadFunc()">
         <!--<form action="/action_page.php"><fieldset>
@@ -16,26 +17,23 @@
           <input type="submit" value="Submit">
           </fieldset>
         </form>-->
-        
-        <layer id = "activityMenu" z-index = 2>
-          <button onlick="show('howmany');show('genericInput')">Shower</button>
-          <button>Toilet</button>
-          <button>Laundry</button>
-          <button>Brushing Teeth</button>
-          <button onlick="show('howmuch');show('genericInput')">Other</button>
-          <form>gi
-            <div id="genericInputDiv">
-              <p id="howmuch">How Much Water Did You Use? (in gallons)</p>
-              <input type="number" name="genericInput" placeholder="">
-              <p id="howmany">How Many Minutes Did It Take?</p>
-              <input type="number" id="genericInput" value="">
-            </div>
-          </form>
+        <div id="history">History<br></div>
+        <div id="farm"></div>
+        <button onclick="toggle('activityMenu')">Record Activity</button>
+        <layer id = "activityMenu">
+          <button class="actButton" onclick="addActivity('Shower')">Shower</button>
+          <button class="actButton" onclick="addActivity('Toilet')">Toilet</button>
+          <button class="actButton" onclick="addActivity('Laundry')">Laundry</button>
+          <button class="actButton" onclick="addActivity('Brushing Teeth')">Brushing Teeth</button>
+          <button class="actButton" onclick="addActivity('Other')">Other</button>
+          <div id="genericInputDiv">
+            <p id="howmuch">How Much Water Did You Use? (in gallons)</p>
+            <p id="howmany">How Many Minutes Did It Take?</p>
+            <input type="number" id="amount" value="">
+            <button onClick="addWater('amount')">Submit</button>
+          </div>
         </layer>
-        <h1>PLONTS</h1>
-        <p>Think about how much water you use in everyday life. <br><br>Californians know. Water Conservation. It's For Life.
-        <br> For more information, please visit <a href = "http://saveourwater.com/">Save Our Water</a>.</p>
-        <img src = "images/calidrought_may2018.jpg" height = 50vw/>
-        <p>California has been in drought from December 2011 to January 2017. But it's not over: the problem still exists.</p>
+        
+        <p>PLONT</p>
     </body>
 </html>
