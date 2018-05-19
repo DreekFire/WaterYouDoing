@@ -41,8 +41,6 @@ function myLoadFunc() {
 	document.getElementById("plont").src = plantStages[plant[0]];
 
 	if(diffDays > daysElapsed) {
-		alert(timeDiff);
-		alert(diffDays);
 		daysElapsed++;
 		plant[0]++;
 		if(waterConsumed > startingWater - waterNeeded[plant[0]]) {
