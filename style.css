@@ -38,6 +38,7 @@ body {
     height: 100;
     width: 100;
     filter: none;
+    top: 75%;
 }
 
 #activityMenu {
