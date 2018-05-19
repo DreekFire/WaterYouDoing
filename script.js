@@ -60,6 +60,16 @@ function myLoadFunc() {
 		waterConsumed = 0;
 		localStorage.setItem("waterConsumed", "0");
 	}
+
+	var info = document.getElementById("info").childNodes;
+	info[0].innerHTML += waterNeeded[plant[0]];
+	info[1].innerHTML += plant[0];
+	if(plant[0] < 2) {
+		info[2].innerHTML += daysNeeded[plant[0] + 1] - daysElapsed;
+	} else {
+		info[2].innerHTML += "your tree has reached the max growth stage";
+	}
+	info[3].innerHTML += daysElapsed;
 	
 	localStorage.setItem("daysElapsed", String(daysElapsed));
 	localStorage.setItem("waterConsumed", String(waterConsumed));

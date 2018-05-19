@@ -16,10 +16,15 @@ body {
     background-size: cover;
 }
 
-#activityButton {
+#activityDiv {
     position: fixed;
     top: 2em;
     right: 2em;
+}
+
+#activityButton {
+    position: relative;
+    z-index: 3;
     height: 10em;
     width: 20em;
 }
@@ -39,6 +44,7 @@ body {
 }
 
 #activityMenu {
+    width: 80vw;
     z-index: 2;
     display: none;
     position: absolute;
@@ -65,10 +71,18 @@ body {
 }
 
 #history {
+    position: relative;
+    display: block;
     float: right;
     width: 10em;
     margin-top: 2em;
     margin-right: 20em;
+}
+
+#info {
+    position: absolute;
+    bottom: 10em;
+    left: 65%;
 }
 
 #footer {
@@ -89,8 +103,6 @@ body {
     -webkit-appearance: none;
 
 }
-
-
 
 #toilet{
     background-image: url("Toilet.png");
