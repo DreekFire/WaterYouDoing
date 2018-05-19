@@ -3,35 +3,40 @@
 //laundry 45
 //brushing teeth 0.5
 
-var waterNeeded = [20, 60, 100];
-var daysNeeded = [2, 4, 5];
-var daysElapsed = 0;
-var waterConsumed = 0;
-var startingWater = 80;
-var plant = [0, 0];
-var shower = false;
-var startDate = new Date(2018, 05, 19);
-var today = new Date();
-var d = today.getDate();
-var m = today.getMonth()+1; //January is 0!
-var y = today.getFullYear();
-var timeDiff = Math.abs(today.getTime() - startDate.getTime());
-var diffDays = Math.floor(timeDiff / (1000 * 3600 * 24));
+function onLoad() {
+	var waterNeeded = [20, 60, 100];
+	var daysNeeded = [2, 6, 11];
+	var daysElapsed = Number(localStorage.getItem("daysElapsed")) || 0;
+	var waterConsumed = Number(localStorage.getItem("waterConsumed")) || 0;
+	var startingWater = Number(localStorage.getItem("startingWater")) || 80;
+	var plant = [Number(localStorage.getItem("plant0")), Number(localStorage.getItem("plant1"))] || [0, 0];
+	var shower = false;
+	var today = new Date();
+	var d = today.getDate();
+	var m = today.getMonth()+1; //January is 0!
+	var y = today.getFullYear();
+	var startDate = localStorage.getItem("startDate") || new Date(y, m, d);
+	var timeDiff = Math.abs(today.getTime() - startDate.getTime());
+	var diffDays = Math.floor(timeDiff / (1000 * 3600 * 24));
 
-var quotes = [
-	"",
-	"",
-	"",
-	"",
-	"",
-	""
-]
-
-if(diffDays >= daysElapsed) {
-	daysElapsed++;
-	if(waterConsumed > startingWater - waterNeeded[plant[0]]) {
-		plant[1]++;
+	if(diffDays >= daysElapsed) {
+		daysElapsed++;
+		plant[0]++;
+		if(waterConsumed > startingWater - waterNeeded[plant[0]]) {
+			plant[1]++;
+			plant[0]--;
+		}
+		if(daysElapsed > daysNeeded[plant[0]]) {
+			plant[0]++;
+		}
 	}
+	
+	localStorage.setItem("daysElapsed", String(daysElapsed));
+	localStorage.setItem("waterConsumed", String(waterConsumed));
+	localStorage.setItem("startingWater", String(startingWater));
+	localStorage.setItem("plant0", String(plant[0]));
+	localStorage.setItem("plant1", String(plant[1]));
+	localStorage.setItem("startDate", String(startDate));
 }
 
 function show(id) {
@@ -54,13 +59,13 @@ function toggle(id) {
 }
 
 function consumeWater(gallons) {
-	waterConsumed += gallons;
+	waterConsumed = Number(waterConsumed) + Number(gallons);
 	localStorage.setItem("waterConsumed", waterConsumed);
 }
 
 function addWater(id) {
 	e = document.getElementById(id);
-	gallons = e.value;
+	gallons = Number(e.value);
 	if(shower) {
 		consumeWater(gallons * 5 / 8);
 		addText("history", "Shower: " + gallons * 5 / 8 + "<br>");
