@@ -19,7 +19,7 @@
 	var diffDays;
 
 function myLoadFunc() {
-	waterNeeded = [20, 60, 100];
+	waterNeeded = [20, 60, 80];
 	daysNeeded = [2, 6, 11];
 	daysElapsed = Number(localStorage.getItem("daysElapsed")) || 0;
 	waterConsumed = Number(localStorage.getItem("waterConsumed")) || 0;
@@ -30,7 +30,12 @@ function myLoadFunc() {
 	d = today.getDate();
 	m = today.getMonth();
 	y = today.getFullYear();
-	startDate = new Date(localStorage.getItem("startDate")) || new Date(y, m, d);
+	currentDate = new Date(y, m, d);
+	if(localStorage.getItem("startDate") == null) {
+		startDate = currentDate;
+	} else {
+		startDate = new Date(localStorage.getItem("startDate"));
+	}
 	timeDiff = Math.abs(today.getTime() - startDate.getTime());
 	diffDays = Math.floor(timeDiff / (1000 * 3600 * 24));
 	var plantStages = [
@@ -42,7 +47,6 @@ function myLoadFunc() {
 
 	if(diffDays > daysElapsed) {
 		daysElapsed++;
-		plant[0]++;
 		if(waterConsumed > startingWater - waterNeeded[plant[0]]) {
 			plant[1]++;
 			plant[0]--;
@@ -50,6 +54,8 @@ function myLoadFunc() {
 		if(daysElapsed > daysNeeded[plant[0]] && plant[0] < 2) {
 			plant[0]++;
 		}
+		waterConsumed = 0;
+		localStorage.setItem("waterConsumed", "0");
 	}
 	
 	localStorage.setItem("daysElapsed", String(daysElapsed));
