@@ -47,7 +47,7 @@ function myLoadFunc() {
 			plant[1]++;
 			plant[0]--;
 		}
-		if(daysElapsed > daysNeeded[plant[0]]) {
+		if(daysElapsed > daysNeeded[plant[0]] && plant[0] < 2) {
 			plant[0]++;
 		}
 	}
