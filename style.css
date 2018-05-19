@@ -1,0 +1,61 @@
+<<<<<<< HEAD
+=======
+html {
+    -webkit-appearance: none;
+    border-radius: 0;
+    background-image: url("images/waterbackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    height : 100%;
+    background-image: url("images/waterbackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+#activityMenu {
+    display: none;
+    position: absolute;
+}
+
+#genericInput {
+    display: none;
+}
+
+#howmuch {
+    display: none;
+}
+
+#howmany {
+    display: none;
+}
+
+#genericInputDiv {
+    width: 45vw;
+    position: relative;
+    display: none;
+    float: left;
+}
+
+#history {
+    float: right;
+    width: 10em;
+}
+
+.actButton {
+    height: 30vw;
+    width: 30vw;
+    margin: 1em;
+    float: left;
+    border: none;
+    background: greenyellow;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+>>>>>>> a7057502c5b5e2f171fcf7b55ca7850f5c44d9d4
