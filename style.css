@@ -9,10 +9,10 @@ html {
 body {
     color: green;
     font-family: Raleway, Georgia, 'Times New Roman', Times, serif;
+    height : 100%;
+    background-image: url("images/transparent-bg.png");
     padding: 0;
     margin: 0;
-    height: 100%;
-    background-image: url("images/transparent-bg.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -62,13 +62,17 @@ body {
     position: absolute;
     margin-top: 1em;
     margin-left: 1em;
+    top: 75%;
+    left: 75%;
 }
 
 #plont {
     z-index: 1;
-    height: 100vh;
-    width: 100vh;
+    height: 100;
+    width: 100;
     filter: none;
+    top: 75%;
+    left: 75%;
 }
 
 #activityMenu {
@@ -152,7 +156,7 @@ input::-webkit-inner-spin-button {
 }
 
 #toilet{
-    background-image: url("Toilet.png");
+    background-image: url("images/Toilet.png");
 }
 
 
