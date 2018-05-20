@@ -66,7 +66,7 @@ function myLoadFunc() {
 		localStorage.setItem("waterConsumed", "0");
 	}
 	if(plant[0] == 2) {
-		alert("Congratulations, your plant has reached maturity with " + startingWater + "starting water");
+		alert("Congratulations, your plant has reached maturity with " + startingWater + " starting water");
 	}
 
 	document.getElementById("waterNeed").innerHTML += waterNeeded[plant[0]];
