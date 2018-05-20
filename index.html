@@ -4,6 +4,7 @@
         <title>Water things</title>
         <script src="script.js"></script>
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     </head>
     <body onload="myLoadFunc()">
         <!--<form action="/action_page.php"><fieldset>
@@ -38,6 +39,11 @@
           </form>
 
         </form>-->
+        <div id="startQuery">
+          <p>How much water would you like to start with?</p>
+          <input type="number" id="startWater" value="">
+          <button id="confirm" onClick="confirm()">Submit</button>
+        </div>
         <div id="history">History<br></div>
         <div id="farm"></div>
         <layer id = "activityMenu">
@@ -49,8 +55,8 @@
           <div id="genericInputDiv">
             <p id="howmuch">How Much Water Did You Use? (in gallons)</p>
             <p id="howmany">How Many Minutes Did It Take?</p>
-            <input type="number" id="amount" value="">
-            <button onClick="addWater('amount')">Submit</button>
+            <input type="number" id="amount" value=""><br>
+            <button onClick="addWater('amount')" id="submitAct">Submit</button>
           </div>
         </layer>
 
@@ -61,16 +67,15 @@
         
         <img id="plont" src = "https://i.pinimg.com/originals/29/63/10/29631076dea84ef46c3f48eb58fa36f4.jpg">
         <div id="info">
-          <p>water needed: </p>
-          <p>growth stage: </p>
-          <p>time until next stage: </p>
-          <p>age: </p>
+          <p id="waterNeed">Water needed: </p>
+          <p id="growthStage">Growth stage: </p>
+          <p id="nextStageTime">Time until next stage: </p>
+          <p id="age">Age: </p>
+          <p id="remain">Water remaining: </p>
         </div>
         <div id="footer">
           <h1>PLONTS</h1>
           <p>Think about how much water you use in everyday life. <br><br>Californians know. Water Conservation. It's For Life.
-          
-          
           <p>California has been in drought from December 2011 to January 2017. But it's not over: the <a href = "bootss/moreinfo.html">problem still exists.</a></p>
         </div>
     </body>

@@ -18,9 +18,14 @@
 	var timeDiff;
 	var diffDays;
 
+function confirm() {
+	startingWater = document.getElementById("startWater").value;
+	document.getElementById("startQuery").style.display = "none";
+}
+
 function myLoadFunc() {
 	waterNeeded = [20, 60, 80];
-	daysNeeded = [2, 6, 11];
+	daysNeeded = [2, 6];
 	daysElapsed = Number(localStorage.getItem("daysElapsed")) || 0;
 	waterConsumed = Number(localStorage.getItem("waterConsumed")) || 0;
 	startingWater = Number(localStorage.getItem("startingWater")) || 80;
@@ -60,16 +65,19 @@ function myLoadFunc() {
 		waterConsumed = 0;
 		localStorage.setItem("waterConsumed", "0");
 	}
-
-	var info = document.getElementById("info").childNodes;
-	info[0].innerHTML += waterNeeded[plant[0]];
-	info[1].innerHTML += plant[0];
-	if(plant[0] < 2) {
-		info[2].innerHTML += daysNeeded[plant[0] + 1] - daysElapsed;
-	} else {
-		info[2].innerHTML += "your tree has reached the max growth stage";
+	if(plant[0] == 2) {
+		alert("Congratulations, your plant has reached maturity with " + startingWater + "starting water");
 	}
-	info[3].innerHTML += daysElapsed;
+
+	document.getElementById("waterNeed").innerHTML += waterNeeded[plant[0]];
+	document.getElementById("growthStage").innerHTML += plant[0];
+	if(plant[0] < 2) {
+		document.getElementById("nextStageTime").innerHTML += daysNeeded[plant[0]] - daysElapsed;
+	} else {
+		document.getElementById("nextStageTime").innerHTML = "your tree has reached the max growth stage";
+	}
+	document.getElementById("age").innerHTML += daysElapsed;
+	document.getElementById("remain").innerHTML += startingWater - waterConsumed;
 	
 	localStorage.setItem("daysElapsed", String(daysElapsed));
 	localStorage.setItem("waterConsumed", String(waterConsumed));
